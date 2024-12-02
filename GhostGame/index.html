@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple P5.js Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body style="background-color: #969696;">
+    <div id="game-container">
+        <script>
+            let bg;
+            let clickedMessage = "";
+            let messageX = 0;
+            let messageY = 0;
+            let score = 0;
+            let optionsVisible = false;
+
+            function preload() {
+                bg = loadImage('ghostpic.jpg');
+            }
+
+            function setup() {
+                const canvas = createCanvas(1000, 1000);
+                canvas.parent("game-container");
+            }
+
+            function draw() {
+                background(bg);
+                fill(255);
+                textSize(16);
+                textAlign(LEFT);
+                text('Score: ' + score, 10, 30);
+
+                displayCoordinates();
+                checkMouseOverGravestones();
+
+                if (score >= 60) {
+                    fill(0);
+                    rect(width / 2 - 300, height / 2 - 120, 600, 80);
+                    fill(0, 200, 0);
+                    textSize(32);
+                    textAlign(CENTER);
+                    text('Congratulations! You have completed the game!', width / 2, height / 2 - 70);
+                    noLoop();
+                }
+
+                if (clickedMessage !== "") {
+                    fill(255);
+                    textSize(24);
+                    textAlign(CENTER);
+                    text(clickedMessage, messageX, messageY);
+                }
+
+                if (optionsVisible) {
+                    fill(200);
+                    rect(width / 2 - 100, height / 2 + 50, 200, 30);
+                    fill(0);
+                    textSize(16);
+                    textAlign(CENTER);
+                    text('Accept', width / 2, height / 2 + 70);
+
+                    fill(200);
+                    rect(width / 2 - 100, height / 2 + 90, 200, 30);
+                    fill(0);
+                    textSize(16);
+                    textAlign(CENTER);
+                    text('Decline', width / 2, height / 2 + 110);
+                }
+            }
+
+            function displayCoordinates() {
+                fill(255);
+                textSize(16);
+                text('X: ' + mouseX + ' Y: ' + mouseY, 10, height - 10);
+            }
+
+            let gravestones = [
+                { x: 200, y: 600, w: 50, h: 100, message: 'A ghostly figure appears, offering you a spectral key.' },
+                { x: 400, y: 550, w: 50, h: 100, message: 'A cold breeze carries the whisper of a ghost, asking for your help.' },
+                { x: 600, y: 650, w: 50, h: 100, message: 'A shadowy spirit emerges, inviting you to follow it into the darkness.' },
+                { x: 800, y: 600, w: 50, h: 100, message: 'A ghostly child appears, holding out a spectral doll.' },
+                { x: 300, y: 700, w: 60, h: 120, message: 'You see a ghostly figure, pointing towards an old grave.' },
+                { x: 700, y: 500, w: 70, h: 110, message: 'A spectral voice asks you to light a candle at a tombstone.' }
+            ];
+
+            function checkMouseOverGravestones() {
+                let isHovering = false;
+                for (let gravestone of gravestones) {
+                    if (
+                        mouseX > gravestone.x &&
+                        mouseX < gravestone.x + gravestone.w &&
+                        mouseY > gravestone.y &&
+                        mouseY < gravestone.y + gravestone.h
+                    ) {
+                        isHovering = true;
+                        fill(255, 0, 0, 100);
+                        rect(gravestone.x, gravestone.y, gravestone.w, gravestone.h);
+                    }
+                }
+
+                if (isHovering) {
+                    cursor('pointer');
+                } else {
+                    cursor('default');
+                }
+            }
+
+            function mousePressed() {
+                if (optionsVisible) {
+                    if (mouseX > width / 2 - 100 && mouseX < width / 2 + 100 && mouseY > height / 2 + 50 && mouseY < height / 2 + 80) {
+                        // Accept option
+                        score += 10;
+                        optionsVisible = false;
+                        clickedMessage = "You accepted the ghost's offer.";
+                    } else if (mouseX > width / 2 - 100 && mouseX < width / 2 + 100 && mouseY > height / 2 + 90 && mouseY < height / 2 + 120) {
+                        // Decline option
+                        optionsVisible = false;
+                        clickedMessage = "You declined the ghost's request.";
+                    }
+                    return;
+                }
+                for (let gravestone of gravestones) {
+                    if (
+                        mouseX > gravestone.x &&
+                        mouseX < gravestone.x + gravestone.w &&
+                        mouseY > gravestone.y &&
+                        mouseY < gravestone.y + gravestone.h
+                    ) {
+                        clickedMessage = gravestone.message;
+                        messageX = width / 2;
+                        messageY = height / 2;
+                        optionsVisible = true;
+                    }
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
