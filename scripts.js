@@ -1,7 +1,8 @@
-let currentIndex = 0;
+function changeSlide(carouselId, direction) {
+    const carousel = document.getElementById(carouselId);
+    const slides = carousel.querySelectorAll(".carousel-slide");
+    let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
 
-function changeSlide(direction) {
-    const slides = document.querySelectorAll(".carousel-slide");
     slides[currentIndex].classList.remove("active");
     currentIndex = (currentIndex + direction + slides.length) % slides.length;
     slides[currentIndex].classList.add("active");

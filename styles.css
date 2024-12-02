@@ -179,3 +179,63 @@ footer {
 .button:hover {
     background-color: #3e5264;
 }
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 300px;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #3e5264;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.carousel-slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.carousel-slide.active {
+    display: flex;
+}
+
+.caption {
+    text-align: center;
+    background-color: #2d3e50;
+    color: #e3f9fd;
+    padding: 10px;
+    font-size: 0.9em;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
