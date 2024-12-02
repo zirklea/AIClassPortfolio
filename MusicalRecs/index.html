@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    canvas {
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let bgImage;
+
+    function preload() {
+      //Loade Cemetary image
+      Cemetary = loadImage('Cemetary.jpg')
+        }
+      ;
+    
+
+    function setup() {
+      let cnv = createCanvas(1000, 1000);
+      cnv.parent('body');
+    }
+
+    function draw() {
+      if (bgImage) {
+        background(bgImage);
+      } else {
+        background(200);
+        fill(0);
+        textSize(32);
+        textAlign(CENTER, CENTER);
+        text('Loading background...', width / 2, height / 2);
+      }
+    }
+  </script>
+</body>
+</html>

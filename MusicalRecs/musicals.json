@@ -1,0 +1,152 @@
+[
+    {
+        "title": "Oklahoma!",
+        "author": "Richard Rodgers & Oscar Hammerstein II",
+        "year": 1943,
+        "genre": "Book"
+    },
+    {
+        "title": "West Side Story",
+        "author": "Leonard Bernstein & Stephen Sondheim",
+        "year": 1957,
+        "genre": "Book"
+    },
+    {
+        "title": "The Sound of Music",
+        "author": "Richard Rodgers & Oscar Hammerstein II",
+        "year": 1959,
+        "genre": "Book"
+    },
+    {
+        "title": "Fiddler on the Roof",
+        "author": "Jerry Bock, Sheldon Harnick & Joseph Stein",
+        "year": 1964,
+        "genre": "Book"
+    },
+    {
+        "title": "Cabaret",
+        "author": "John Kander & Fred Ebb",
+        "year": 1966,
+        "genre": "Concept"
+    },
+    {
+        "title": "Hair",
+        "author": "Galt MacDermot, Gerome Ragni & James Rado",
+        "year": 1967,
+        "genre": "Rock"
+    },
+    {
+        "title": "Company",
+        "author": "Stephen Sondheim",
+        "year": 1970,
+        "genre": "Concept"
+    },
+    {
+        "title": "Jesus Christ Superstar",
+        "author": "Andrew Lloyd Webber & Tim Rice",
+        "year": 1971,
+        "genre": "Rock"
+    },
+    {
+        "title": "Chicago",
+        "author": "John Kander & Fred Ebb",
+        "year": 1975,
+        "genre": "Book"
+    },
+    {
+        "title": "A Chorus Line",
+        "author": "Marvin Hamlisch & Edward Kleban",
+        "year": 1975,
+        "genre": "Concept"
+    },
+    {
+        "title": "Evita",
+        "author": "Andrew Lloyd Webber & Tim Rice",
+        "year": 1978,
+        "genre": "Rock"
+    },
+    {
+        "title": "Les Mis\u00e9rables",
+        "author": "Claude-Michel Sch\u00f6nberg & Alain Boublil",
+        "year": 1980,
+        "genre": "Operetta"
+    },
+    {
+        "title": "Cats",
+        "author": "Andrew Lloyd Webber",
+        "year": 1981,
+        "genre": "Concept"
+    },
+    {
+        "title": "Little Shop of Horrors",
+        "author": "Alan Menken & Howard Ashman",
+        "year": 1982,
+        "genre": "Pastiche"
+    },
+    {
+        "title": "Phantom of the Opera",
+        "author": "Andrew Lloyd Webber",
+        "year": 1986,
+        "genre": "Operetta"
+    },
+    {
+        "title": "Into the Woods",
+        "author": "Stephen Sondheim",
+        "year": 1987,
+        "genre": "Book"
+    },
+    {
+        "title": "Miss Saigon",
+        "author": "Claude-Michel Sch\u00f6nberg & Alain Boublil",
+        "year": 1989,
+        "genre": "Operetta"
+    },
+    {
+        "title": "Rent",
+        "author": "Jonathan Larson",
+        "year": 1996,
+        "genre": "Rock"
+    },
+    {
+        "title": "The Lion King",
+        "author": "Elton John & Tim Rice",
+        "year": 1997,
+        "genre": "Disney-Style"
+    },
+    {
+        "title": "Mamma Mia!",
+        "author": "ABBA (Bj\u00f6rn Ulvaeus & Benny Andersson)",
+        "year": 1999,
+        "genre": "Jukebox"
+    },
+    {
+        "title": "Hairspray",
+        "author": "Marc Shaiman & Scott Wittman",
+        "year": 2002,
+        "genre": "Book"
+    },
+    {
+        "title": "Wicked",
+        "author": "Stephen Schwartz",
+        "year": 2003,
+        "genre": "Disney-Style"
+    },
+    {
+        "title": "Hamilton",
+        "author": "Lin-Manuel Miranda",
+        "year": 2015,
+        "genre": "Pastiche"
+    },
+    {
+        "title": "Dear Evan Hansen",
+        "author": "Benj Pasek & Justin Paul",
+        "year": 2015,
+        "genre": "Book"
+    },
+    {
+        "title": "Six",
+        "author": "Toby Marlow & Lucy Moss",
+        "year": 2017,
+        "genre": "Pastiche"
+    }
+]
