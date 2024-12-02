@@ -6,7 +6,7 @@ function changeSlide(carouselId, direction) {
     // Remove the 'active' class from the current slide
     slides[currentIndex].classList.remove("active");
 
-    // Calculate the new index
+    // Calculate the new index based on the direction
     currentIndex = (currentIndex + direction + slides.length) % slides.length;
 
     // Add the 'active' class to the new slide
